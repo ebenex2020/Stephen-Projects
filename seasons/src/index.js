@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import SeasonsDisplay from "./SeasonsDisplay";
+import Loader from "./Loader";
 
 // const App = () => {
 //   window.navigator.geolocation.getCurrentPosition(
@@ -33,7 +34,7 @@ class App extends React.Component {
     if (this.state.errorMessage && !this.state.lat) {
       return <div>error: {this.state.errorMessage}</div>;
     }
-    return <div>Loading!!!</div>;
+    return <Loader message="Please Allow the location Pop-up" />;
   }
 }
 
