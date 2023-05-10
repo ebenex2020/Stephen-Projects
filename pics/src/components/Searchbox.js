@@ -27,8 +27,9 @@ class SearchBox extends React.Component {
       <div className="ui segment">
         <form onSubmit={this.onFormSubmit} className="ui form">
           <div className="field">
-            <label>Image Search</label>
+            <label htmlFor="name">Image Search</label>
             <input
+              id="name"
               type="text"
               value={this.state.term}
               onChange={e => this.setState({ term: e.target.value })}
